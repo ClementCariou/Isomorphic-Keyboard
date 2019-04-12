@@ -1,0 +1,270 @@
+#container {
+  overflow: hidden;
+  margin: auto;
+  padding-bottom: 4.8259vh;
+  width: 145.225vh;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
+
+#container ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 0;
+  width: 9999px;
+  margin: 0;
+  margin-bottom: 5.8259vh;
+  padding-left: 3.075vh;
+}
+
+#container ol.even {
+  left: 10.225vh;
+}
+
+#container ol .hex {
+  position: relative;
+  width: 6.15vh;
+  height: 10.6518vh;
+  background: #ddd;
+  color: #444;
+  display: inline-block;
+  margin: 0;
+  margin-right: 14.3vh;
+  border-radius: 0.4vh;
+}
+
+#container ol .hex:before, #container ol .hex:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+}
+
+#container ol .hex:before {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+#container ol .hex:after {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+#container ol .hex.black-note {
+  background-color: #444;
+  color: white;
+}
+
+#container ol .hex.blue-note {
+  background-color: #3068c1;
+  color: white;
+}
+
+#container ol .hex.lightblue-note {
+  background-color: lightblue;
+}
+
+#container ol .hex.signal {
+  background: orange;
+}
+
+#container ol .hex:hover {
+  background: #F58787;
+  cursor: pointer;
+}
+
+#container ol .hex.octave-0 {
+  background-color: red;
+}
+
+#container ol .hex.octave-1 {
+  background-color: #ffaa00;
+}
+
+#container ol .hex.octave-2 {
+  background-color: #aaff00;
+}
+
+#container ol .hex.octave-3 {
+  background-color: lime;
+}
+
+#container ol .hex.octave-4 {
+  background-color: #00ffaa;
+}
+
+#container ol .hex.octave-5 {
+  background-color: #00aaff;
+}
+
+#container ol .hex.octave-6 {
+  background-color: blue;
+}
+
+#container ol .hex.octave-7 {
+  background-color: #aa00ff;
+}
+
+#container ol .hex.octave-8 {
+  background-color: #ff00aa;
+}
+
+#container ol .hex.octave-9 {
+  background-color: red;
+}
+
+#container ol .hex.octave-10 {
+  background-color: #ffaa00;
+}
+
+#container ol .hex span, #container ol .hex div {
+  position: absolute;
+  z-index: 1;
+  font-size: 3.7vh;
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#container ol .hex span.octave, #container ol .hex div.octave {
+  font-size: 2vh;
+  opacity: 0.3;
+  top: 80%;
+}
+
+#container ol .hex span .pointer-0, #container ol .hex div .pointer-0 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(0deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(0deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-30, #container ol .hex div .pointer-30 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(30deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(30deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-60, #container ol .hex div .pointer-60 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(60deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(60deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-90, #container ol .hex div .pointer-90 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(90deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(90deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-120, #container ol .hex div .pointer-120 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(120deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(120deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-150, #container ol .hex div .pointer-150 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(150deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(150deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-180, #container ol .hex div .pointer-180 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(180deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(180deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-210, #container ol .hex div .pointer-210 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(210deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(210deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-240, #container ol .hex div .pointer-240 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(240deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(240deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-270, #container ol .hex div .pointer-270 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(270deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(270deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-300, #container ol .hex div .pointer-300 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(300deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(300deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-330, #container ol .hex div .pointer-330 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(330deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(330deg) translateY(-5vh);
+}
+
+#container ol .hex span .pointer-360, #container ol .hex div .pointer-360 {
+  display: none;
+  font-size: 1.5vh;
+  -webkit-transform: translate(-50%, -50%) rotateZ(360deg) translateY(-5vh);
+          transform: translate(-50%, -50%) rotateZ(360deg) translateY(-5vh);
+}
+
+#container ol .hex span.marker, #container ol .hex div.marker {
+  width: 8.5485vh;
+  height: 8.5485vh;
+  border-radius: 6.15vh;
+  border-width: 2px;
+  border-style: solid;
+}
+
+#container.tilted {
+  padding-top: 3.075vh;
+  padding-bottom: 0;
+  width: 144.6475vh;
+}
+
+#container.tilted ol {
+  margin-bottom: 10.225vh;
+  padding-left: 0;
+}
+
+#container.tilted ol.even {
+  left: 5.8259vh;
+}
+
+#container.tilted ol .hex {
+  width: 10.6518vh;
+  height: 6.15vh;
+  margin-right: 1vh;
+}
+
+#container.tilted ol .hex span.octave {
+  top: 100%;
+}
+/*# sourceMappingURL=hex.css.map */

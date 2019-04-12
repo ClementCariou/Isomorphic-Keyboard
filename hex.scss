@@ -1,0 +1,123 @@
+$hex-edge: 6.15vh; //size of an edge
+$hex-margin: 0.5vh;
+$hex-height: $hex-edge * 1.732; //small diagonal
+$hex-diag: $hex-edge * 2; //big diagonal
+
+#container {
+  overflow: hidden;
+  margin: auto;
+  padding-bottom: $hex-height / 2 - $hex-margin;
+  width: 7 * ($hex-edge + $hex-diag + $hex-margin * 4) + ($hex-diag - $hex-edge)/2 - 2 * $hex-margin;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */ 
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;   
+  ol {
+    display: flex;
+    position: relative;
+    height: 0;
+    width: 9999px;
+    margin: 0;
+    margin-bottom: $hex-height / 2 + $hex-margin;
+    padding-left: ($hex-diag - $hex-edge) / 2;
+    &.even {
+      left: $hex-edge / 2 + $hex-diag / 2 + $hex-margin * 2;
+    }
+    .hex {
+      position: relative;
+      width: $hex-edge; height: $hex-height;
+      background: #ddd;
+      color: #444;
+      display: inline-block;
+      margin: 0;
+      margin-right: $hex-diag + $hex-margin * 4;
+      border-radius: 0.4vh;
+      &:before, &:after {
+        position: absolute;
+        width: inherit; height: inherit;
+        border-radius: inherit;
+        background: inherit;
+        content: '';
+      }
+      &:before {
+        transform: rotate(60deg);
+      }
+      &:after {
+        transform: rotate(-60deg);
+      }
+      &.black-note {
+        background-color: #444;
+        color: white;
+      }
+      &.blue-note {
+        background-color: #3068c1;
+        color: white;
+      }
+      &.lightblue-note {
+        background-color: lightblue;
+      }
+      &.signal{
+        background: orange;
+      }
+      &:hover {
+        background: #F58787;
+        cursor: pointer;
+      }
+      @for $i from 0 through 10 {  
+        &.octave-#{$i} {
+          background-color: hsl($i*400/10, 100%, 50%);
+        };  
+      }
+      span, div {
+        position: absolute;
+        z-index: 1;
+        font-size: 3.7vh;
+        font-family: Verdana, Geneva, sans-serif;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &.octave {
+          font-size: 2vh;
+          opacity: 0.3;
+          top: 80%;
+        }
+        @for $i from 0 through 12 {
+          .pointer-#{$i*30} {
+            display: none;
+            font-size: 1.5vh;
+            transform: translate(-50%, -50%) rotateZ($i*30deg) translateY(-5vh);
+          }
+        }
+        &.marker{
+          width: $hex-diag * 0.695;
+          height: $hex-diag * 0.695;
+          border-radius: $hex-edge;
+          border-width: 2px;
+          border-style: solid;
+        }
+      }
+    }
+  }
+  &.tilted {
+    padding-top: $hex-edge / 2;
+    padding-bottom: 0;
+    width: 12.5 * ($hex-height + $hex-margin * 2) - 2 * $hex-margin;
+    ol {
+      margin-bottom: ($hex-diag + $hex-edge) / 2 + $hex-margin * 2;
+      padding-left: 0;
+      &.even {
+        left: $hex-height/2 + $hex-margin;
+      }
+      .hex {
+        width: $hex-height; height: $hex-edge;
+        margin-right: $hex-margin * 2;
+        span {
+          &.octave {
+            top: 100%;
+          }
+        }
+      }
+    }
+  }
+}

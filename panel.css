@@ -1,0 +1,119 @@
+.sidepanel {
+  height: 590px;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #cccccc;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 0 0 10px 0;
+}
+
+.sidepanel .sidepanelheader {
+  background-color: #eee;
+  padding-top: 1px;
+  width: 280px;
+}
+
+.sidepanel .sidepanelheader .closebtn {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #aaa;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidepanel .sidepanelheader .closebtn:hover {
+  color: #111;
+}
+
+.sidepanel .sidepanelheader .tab {
+  overflow: hidden;
+}
+
+.sidepanel .sidepanelheader .tab button {
+  background-color: #dadada;
+  color: #555;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 15px 15px 0 0;
+}
+
+.sidepanel .sidepanelheader .tab button:hover {
+  background-color: #d3d3d3;
+  color: #333;
+}
+
+.sidepanel .sidepanelheader .tab button.active {
+  background-color: #cccccc;
+  color: #000;
+}
+
+.sidepanel .sidepanelcontent, .sidepanel .sidepaneltitle {
+  width: 220px;
+  padding-left: 20px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.sidepanel .sidepanelcontent {
+  padding-top: 20px;
+}
+
+.sidepanel .sidepanelcontent .tabcontent {
+  display: none;
+}
+
+.sidepanel .sidepanelcontent .tabcontent input, .sidepanel .sidepanelcontent .tabcontent select, .sidepanel .sidepanelcontent .tabcontent .floatDiv {
+  float: right;
+}
+
+.sidepanel .sidepanelcontent .tabcontent input[type=range], .sidepanel .sidepanelcontent .tabcontent input[type=number], .sidepanel .sidepanelcontent .tabcontent select[type=range], .sidepanel .sidepanelcontent .tabcontent select[type=number], .sidepanel .sidepanelcontent .tabcontent .floatDiv[type=range], .sidepanel .sidepanelcontent .tabcontent .floatDiv[type=number] {
+  width: 100px;
+}
+
+.sidepanel .sidepanelcontent .tabcontent input:disabled, .sidepanel .sidepanelcontent .tabcontent select:disabled, .sidepanel .sidepanelcontent .tabcontent .floatDiv:disabled {
+  opacity: 0.5;
+}
+
+.sidepanel .sidepanelcontent .tabcontent input.jscolor, .sidepanel .sidepanelcontent .tabcontent select.jscolor, .sidepanel .sidepanelcontent .tabcontent .floatDiv.jscolor {
+  width: 58px;
+}
+
+.sidepanel .sidepanelcontent .tabcontent input.error, .sidepanel .sidepanelcontent .tabcontent select.error, .sidepanel .sidepanelcontent .tabcontent .floatDiv.error {
+  background-color: red;
+  color: white;
+}
+
+.openbtn {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #cccccc;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 0 10px 0;
+}
+
+.openbtn:hover {
+  background-color: #aaa;
+}
+/*# sourceMappingURL=panel.css.map */

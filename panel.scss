@@ -1,0 +1,100 @@
+$panel-height: 590px;
+
+.sidepanel {
+	height: $panel-height;
+	width: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	background-color: #cccccc;
+	overflow-x: hidden;
+	transition: 0.5s;
+	border-radius: 0 0 10px 0;
+	.sidepanelheader{
+		background-color: #eee;
+		padding-top: 1px;
+		width: 280px;
+		.closebtn {
+			padding: 15px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #aaa;
+			display: block;
+			transition: 0.3s;
+			&:hover {
+				color: #111;
+			}
+			position: absolute;
+			top: 0;
+			right: 10px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+		.tab {
+			overflow: hidden;
+			button {
+				background-color: #dadada;
+				color: #555;
+				float: left;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 12px;
+				transition: 0.3s;
+				border-radius: 15px 15px 0 0;
+				&:hover {
+					background-color: #d3d3d3;
+					color: #333;
+				}
+				&.active {
+					background-color: #cccccc;
+					color: #000;
+				}
+			}
+		}
+	}
+	.sidepanelcontent, .sidepaneltitle{
+		width: 220px;
+		padding-left: 20px;
+		font-family: Verdana, Geneva, sans-serif;
+	}
+	.sidepanelcontent{
+		padding-top: 20px;
+		.tabcontent {
+			display: none;
+			input, select, .floatDiv {
+				float: right;
+				&[type=range], &[type=number]{
+					width: 100px;
+				}
+				&:disabled{
+					opacity: 0.5;
+				}
+				&.jscolor{
+					width: 58px;
+				}
+				&.error {
+					background-color: red;
+					color: white;
+				}
+			}			
+		}
+	}
+}
+.openbtn {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #cccccc;
+	color: black;
+	padding: 10px 15px;
+	border: none;
+	border-radius:0 0 10px 0; 
+	&:hover {
+		background-color: #aaa;
+	}
+}

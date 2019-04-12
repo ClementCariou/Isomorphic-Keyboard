@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HarmonicTable</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="hex.css">
+		<link rel="stylesheet" type="text/css" href="panel.css">
+	</head>
+	<body>
+		<div id="panel" class="sidepanel">
+			<div class="sidepanelheader">
+				<a href="javascript:void(0)" class="closebtn" onclick="openPanel(false)">&times;</a>
+				<h2 class="sidepaneltitle">Settings</h2> 
+				<div class="tab">
+					<button class="tablinks active" onclick="openTab(event.target, 'soundTab')">Sound</button>
+					<button class="tablinks" onclick="openTab(event.target, 'layoutTab')">Layout</button>
+					<button class="tablinks" onclick="openTab(event.target, 'sequencerTab')">Sequencer</button>
+					<button class="tablinks" onclick="openTab(event.target, 'infoTab')">Info</button>
+				</div>
+			</div> 
+			<div class="sidepanelcontent">
+				<div id="soundTab" class="tabcontent" style="display:block;">
+					<label for="type">Waveform :</label>
+					<select id="type" name="type">
+						<option>Square</option>
+						<option>Sine</option>
+						<option>Sawtooth</option>
+						<option>Triangle</option>
+					</select><br><br>
+					<label for="gain">Gain : </label>
+					<input id="gain" name="gain" class="float" value="0.5" min="0.0" max="1.5" step="0.01"><br><br>
+					<label for="attack">Attack : </label>
+					<input id="attack" name="attack" class="float" value="0.01" min="0.0" max="0.4" step="0.005"><br><br>
+					<label for="hold">Hold : </label>
+					<input id="hold" name="hold" class="float" value="0.0" min="0.0" max="0.4" step="0.005"><br><br>
+					<label for="release">Release : </label>
+					<input id="release" name="release" class="float" value="0.1" min="0.0" max="0.4" step="0.005"><br><br>
+					<label for="reverbs">Reverbs : </label>
+					<input id="reverbs" name="reverbs" type="checkbox" checked><br><br>
+					<label for="decay">Decay : </label>
+					<input id="decay" name="decay" class="float" value="20" min="1.5" max="30" step="0.1"><br><br>
+					<label for="filter">Filter : </label>
+					<select id="filter" name="filter">
+						<option>Allpass</option>
+						<option>Lowpass</option>
+						<option>Highpass</option>
+						<option>Bandpass</option>
+						<option>Lowshelf</option>
+						<option>Highshelf</option>
+						<option>Peaking</option>
+						<option>Notch</option>
+					</select><br><br>
+					<label for="frequency">Frequency : </label>
+					<input id="frequency" name="frequency" class="float" value="400" min="10" max="10000" step="1"><br><br>
+					<label for="qfactor">Q factor : </label>
+					<input id="qfactor" name="qfactor" class="float" value="1" min="0" max="10" step="0.1"><br><br>
+				</div>
+				<div id="layoutTab" class="tabcontent">
+					<label for="layout">Layout : </label>
+					<select id="layout" name="layout">
+						<option>Harmonic Table</option>
+						<option>Wicki-Hayden</option>
+						<option>Gerhard</option>
+						<option>Park</option>
+						<option>Jankó</option>
+						<option>C-System</option>
+						<option>B-System</option>
+						<option>Bajan</option>
+						<option>Zigzag</option>
+						<option>Armchair</option>
+						<option>Custom</option>
+					</select><br><br>
+					<label for="uil">UIL Notation : </label>
+					<input id="uil" name="uil" value="3,7,4;R0" disabled style="width:90px"><br><br>
+					<label for="size">Grid size : </label>
+					<input type="text" id="size" name="size" value="12x9" style="width:50px"><br><br>
+					<label for="firstNote">Starting Note : </label>
+					<input type="text" id="firstNote" name="firstNote" value="A6" style="width:40px"><br><br>
+					<label for="notation">Notation : </label>
+					<select id="notation" name="notation">
+						<option>Sharp</option>
+						<option>Flat</option>
+					</select><br><br>
+					<label for="label">Label : </label>
+					<select id="label" name="label">
+						<option>Note & Octave</option>
+						<option>Note</option>
+						<option>Octave</option>
+						<option>Debug Octave</option>
+						<option>None</option>
+					</select><br><br>
+					<label for="mainColor">Main color : </label>
+					<input id="mainColor" name="mainColor" class="jscolor" value="3068c1"><br><br>
+					<label for="secColor">Secondary color : </label>
+					<input id="secColor" name="secColor" class="jscolor" value="add8e6"><br><br>
+					<label for="oppositeColor">Opposite color : </label>
+					<input id="oppositeColor" name="oppositeColor" class="jscolor" value="444"><br><br>
+					<label for="defaultColor">Default color : </label>
+					<input id="defaultColor" name="defaultColor" class="jscolor" value="ddd"><br><br>
+					<label for="hoverColor">Hover color : </label>
+					<input id="hoverColor" name="hoverColor" class="jscolor" value="f58787"><br><br>
+					<label for="signalColor">Signal color : </label>
+					<input id="signalColor" name="signalColor" class="jscolor" value="ffa500"><br><br>
+				</div>
+				<div id="sequencerTab" class="tabcontent">
+					<label for="tempo">Tempo : </label>
+					<input id="tempo" name="tempo" class="float" value="120" min="0" max="1000" step="1"><br><br>
+					<label for="iterations">Iterations : </label>
+					<input id="iterations" name="iterations" class="float" value="8" min="0" max="128" step="1"><br><br>
+					<label for="channels">Channels : </label>
+					<input id="channels" name="channels" class="float" value="8" min="1" max="32" step="1"><br><br>
+					<input id="stop" type="button" value="Stop"></input><input id="start" type="button" value="Start"></input><br><br><p>To use the sequencer :</p>
+					<ul>
+						<li>Right or shift click to create a starting node</li>
+						<li>Drag right click to redirect the signal</li>
+						<li>Wheel or control click to toggle the keys</li>
+						<li>Click on the start button</li>
+					</ul>
+				</div>
+				<div id="infoTab" class="tabcontent">
+					<p>This is an hexagonal isomorphic keyboard sequencer inspired by <a href="https://www.youtube.com/watch?v=dVoSY961hjM">electrogear</a> and <a href="https://shiverware.com/musixpro/">Musix Pro</a>.</p>
+					<p>Depending on the layout selected, each of the three axes corresponds to a different interval.</p>
+					<p>Each complete layout can be encoded into an unique UIL label, you can learn more in this <a href="https://www.researchgate.net/publication/255993032_Discrete_Isomorphic_Completeness_and_a_Unified_Isomorphic_Layout_Format">paper</a>.</p>
+					<p>Author: Clément Cariou Licence: MIT</p>
+				</div>
+			</div>
+		</div>
+		<button class="openbtn" onclick="openPanel(true)">&#9776;</button>
+		<div id="container" class="tilted" oncontextmenu="return false;"></div>
+		<script type="text/javascript" src="sound.js"></script>
+		<script type="text/javascript" src="layout.js"></script>
+		<script type="text/javascript" src="sequencer.js"></script>
+		<script type="text/javascript" src="parms.js"></script>
+		<script type="text/javascript" src="jscolor.js"></script>
+	</body>
+</html>
